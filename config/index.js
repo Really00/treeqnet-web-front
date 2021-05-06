@@ -26,21 +26,21 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 8280,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
       '/account': {
                       //target: 'http://202.38.81.87:3001',
-                       target: 'http://127.0.0.1:3001',
+                       target: 'http://127.0.0.1:3111',
                       changeOrigin: true,
                       pathRewrite: {
                         '^/account': '/individual-center-web/v1/account'
                       }
                     },
         '/object': {
-                       target: 'http://127.0.0.1:3002',
+                       target: 'http://127.0.0.1:3112',
                         //target: 'http://202.38.81.87:3002',
                         changeOrigin: true,
                         pathRewrite: {
