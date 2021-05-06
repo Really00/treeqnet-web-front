@@ -1,0 +1,48 @@
+
+.tutorial-content {
+    font-family: "Times New Roman";
+    
+    font-weight: 300;
+    font-size: 18px;
+}
+
+#nav {
+    height: 40px;
+    margin-top: 50px;
+    
+}
+
+.tutorial-nav-ul {
+list-style: none;               
+margin-left: 2%;
+}           
+.tutorial-nav-li {
+display: block;
+float: left;
+}           
+#nav a {
+line-height: 40px;
+display: block;
+
+text-decoration: none;
+padding: 0 20px;
+}           
+    
+.tutorial-ul {
+    padding-left: 3%;
+}
+
+
+
+/* Content Styles */
+
+
+.tutorial-doc-content {
+    padding-left: 6%;
+    width: 65%;
+}
+
+
+
+
+
