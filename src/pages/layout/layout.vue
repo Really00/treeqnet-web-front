@@ -88,11 +88,11 @@
             title: 'Add task',
             icon: 'el-icon-document-add'
           },
-          {
+         /* {
             path: '/tasks/delete',
             title: 'Run task',
             icon: 'el-icon-loading'
-          },
+          },*/
           {
             path: '/tasks/result',
             title: 'Result',
@@ -103,14 +103,14 @@
             title: 'Log',
             icon: 'el-icon-s-data'
           },
-
+/*
           {
              path: '/models/insert',
              title: 'Add Model',
              icon: 'el-icon-document-add'
           },
 
-
+*/
           {
             path: '/tutorial/index',
             title: 'Tutorial',
