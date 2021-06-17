@@ -10,8 +10,8 @@
     <el-divider></el-divider>
    
     <div style="margin-top: 15px; width: 40%">
-      <el-input placeholder="please input task name you execute" v-model="name" class="input-with-select" id = "demo2">
-        <el-button slot="append" icon="el-icon-search" @click="getList(name)"></el-button>
+      <el-input placeholder="please input task name you execute" v-model="id" class="input-with-select" id = "demo2">
+        <el-button slot="append" icon="el-icon-search" @click="getList(id)"></el-button>
       </el-input>
     </div>
     
@@ -105,7 +105,7 @@ export default {
   },
    created() {
             //请求第一页数据
-            this.getList(this.name)
+            this.getList(this.id)
            
 
         } ,
@@ -150,10 +150,10 @@ export default {
         link.click();
       },
       
-      getList (name) {
+      getList (id) {
               let params = {
                     params: {
-                        name: name
+                        id: id
                         
                     }
                 };
@@ -175,7 +175,7 @@ export default {
 
      mounted() {
             //请求第一页数据
-            this.getList(this.name)
+            this.getList(this.id)
         } 
   }
 }
