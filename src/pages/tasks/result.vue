@@ -67,11 +67,10 @@
         <el-tab-pane label="Execute Logs" name="second" >
           <span  id="lis"></span>
         </el-tab-pane>
-        <el-tab-pane label="Basic Statistics" name="third" >Statics</el-tab-pane>
-        <el-tab-pane label="preview Results" name="fourth" >
+        <el-tab-pane label="preview Results" name="third" >
          <preview :info="items"></preview>
         </el-tab-pane>
-        <el-tab-pane label="Download" name="fifth">
+        <el-tab-pane label="Download" name="fourth">
           <el-button  @click="download1(items['outparams'])" type="primary" icon="el-icon-download">Download Results</el-button>
         </el-tab-pane>
       </el-tabs>

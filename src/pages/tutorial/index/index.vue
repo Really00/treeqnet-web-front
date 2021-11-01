@@ -22,15 +22,12 @@
       <h2 id="welcome"> Welcome to TreeQNet</h2>
       <p> </p>
       
-      <p>TreeQNet innovatively uses the proteome and phosphoproteome
-         data of tumor tissues and normal tissues of cancer patients to construct tissue-specific kinase-substrate 
-         network , and then uses the elastic regression model to predict so as to realize the prediction of drug sensitivity
-          of patients.  Based on this webserver,
-        You can:</p>
+      <p>The project innovatively uses the proteomic and phosphorylated proteomic information of patients with 
+        colorectal cancer to construct the side expression value, and then uses the method of elastic network selection to extract the kinase-substrate 
+        with the best classification ability as the side marker and construct the patient Prediction model of susceptibility to Afatinib, Regorafenib and Gefitinib.
+        Based on this webserver, You can:</p>
       <ul class='tutorial-ul'>
-        <li>construct tissue-specific kinase-substrate 
-         network using proteome and phosphoproteome data. </li>
-        <li>Predict drug sensitivity of patients. </li>
+        <li>upload proteome and phosphoproteome data, Predict the sensitivity of patients to Afatinib, Regorafenib and Gefitinib.</li>
       </ul>
       
       <h3 id="howtouse"> How to use</h3>
@@ -44,122 +41,49 @@
         to run our example directly.</p>
       <h3 id="ioformat">Input and output format</h3>
 
-      <p> 1) Construction of kinase-substrate network</p>
-      <img src="../img/input1.jpg" class="img-rounded" width='1000' height='500'>
-      <p> 1. First enter the name of your task.</p>
-      <p> 2. Then select the Edge model for your task. The execution of the Edge model requires three input data:</p>
+      <p>1. Select model and the drug category you want to predict. Currently, only the prediction of Afatinib, Gefitinib, and Regorafenib are supported.</p>
+      <img src="../img/model.jpg" class="img-rounded" width='1000' height='500'>
+      <p> Fill in the drug category you want to predict in drug_name, 1 represents Afatinib, 2 represents Gefitinib, 3 represents Regorafenib and the default is 1.</p>
+
+      <p>2. Enter your task name.</p>
+
+      <p>3. Enter your task description information.</p>
+
+      <p> Upload protein and phosphorylation site files (must strictly follow the specified format of the instruction document)</p>
+      <img src="../img/upload.jpg" class="img-rounded" width='1000' height='500'>
       <ul class='tutorial-ul'>
-        <li>ks_sample.csv: Kinase substrate information for data to be calculated</li>
-        <li>KSNode.csv: Protein expression value and phosphorylation site expression value of cancer tissue </li>
-        <li>Labl.csv: The division of training set and test set samples </li>
+        <li>pro.csv</li>
+        <li>pho.csv</li>
       </ul>
+      <p>pro.csv:The protein expression value data of the patient's tumor tissue (any tumor is acceptable) to be predicted</p>
+      <img src="../img/pro.jpg" class="img-rounded" width='1000' height='300'>
+      <p>The first column is the protein gene name of the patient to be predicted (no duplicate values), the second column is the protein 
+        expression value of the patient to be predicted (after normalization, no missing values), the column names 
+        are [ID] and [patient ID ( You can use numbers or letters to number freely, and it must be consistent with the number in pho.csv)], the uploaded file must be in csv format.</p>
+      
+      <p>pho.csv:The expression data of phosphorylation site in tumor tissue (any tumor is acceptable) to be predicted</p>
+      <img src="../img/pho.jpg" class="img-rounded" width='1000' height='300'>
+      <p>The first column is the phosphorylation site ID of the patient to be predicted (no repeated values), the format is [gene name]_[phosphorylation site category][phosphorylation site position], 
+        the second column is the phosphorylation site of the patient to be predicted The expression value of the chemical site (after standardization, no missing values), 
+        the column names are [ID] and [patient ID (free numbers or letters can be used, must be consistent with the number in pro.csv)], the uploaded file must be csv format.</p>
+
       <p>output data:</p>
       <ul class='tutorial-ul'>
-        <li>edge_data.xls: Kinase-substrate edge features</li>
+        <li>drug_response.pdf: predicted values of sample response to Afatinib, gefitinib or regorafenib</li>
+        <li>pheatmap.pdf: pheatmap</li>
       </ul>
 
-      <p>3. Enter your task description information.</p>
-
-      <img src="../img/input2.jpg" class="img-rounded" width='1000' height='400'>
-      <p> 4. Select the required input data.</p>
+      <img src="../img/run_task.jpg" class="img-rounded" width='1000' height='550'>      
       <p> 5. Upload the input data.</p>
-      <p> 6. Click "Run Task" to execute the task.</p>
-
-      <p style="font-weight:bold"> Input Format</p>
-
-      <p>ks_samples.csv:</p>
-      <img src="../img/kssample.jpg" class="img-rounded" width='1000' height='300'>
-      <ul class='tutorial-ul'>
-        <li>Protein: protein name</li>
-        <li>Gene: Edit protein gene</li>
-        <li>Peptide: peptide</li>
-        <li>Residue.Both: Phosphorylation sites of proteins</li>
-        <li>P: Significant difference P-value</li>
-        <li>FC: fold change</li>
-      </ul>
-
-      <p>KSNode.csv:</p>
-      <img src="../img/ksnode.jpg" class="img-rounded" width='1000' height='400'>
-      <ul class='tutorial-ul'>
-        <li>Row name: Kinase_Substrate</li>
-        <li>Column name: sample name</li>
-        <li>Features value: the kinase-substrate test expression value of the sample</li>
-      </ul>
-
-      <p>labl.csv:</p>
-      <img src="../img/labl.jpg" class="img-rounded" width='500' height='300'>
-      <ul class='tutorial-ul'>
-        <li>First column: sample name</li>
-        <li>The second column: 1 represents the training set, 2 represents the testing set</li>
-      </ul>
-
-      <p style="font-weight:bold"> Onput Format</p>
-
-      <p>edge_data.xls：</p>
-      <img src="../img/edge.jpg" class="img-rounded" width='1000' height='400'>
-      <ul class='tutorial-ul'>
-        <li>Row name: Kinase_Substrate_Phosphorylation Site_Testing set/Training Set</li>
-        <li>Column name: sample name</li>
-        <li>Features value: edge features of the kinase-substrate network</li>
-      </ul>
-
-      <p> 1) Predict the patient's sensitivity to drugs</p>
-      <img src="../img/input3.jpg" class="img-rounded" width='1000' height='800'>
-      <p> 1. First enter the name of your task.</p>
-      <p> 2. Then select the Ennet model for your task. The execution of the Ennet model requires eighy input data:</p>
-      <ul class='tutorial-ul'>
-        <li>dbdrug, dbdrug1, dbdrug2, dbdrug3: the observed value of the sample's response to the drug</li>
-        <li>edata1, edata2, edata3, edata11: edge features of kinase substrate network </li>
-      </ul>
-      <p>3. Enter your task description information.</p>
-
-      <img src="../img/input4.jpg" class="img-rounded" width='1000' height='550'>
-      <p> 4. Select the required input data.</p>
-      <p> 5. Upload the input data.</p>
-      <p> 6. Click "Run Task" to execute the task.</p>
-
-      <p style="font-weight:bold"> Input Format</p>
-
-      <p>dbdrug1.csv:</p>
-      <img src="../img/dbdrug1.jpg" class="img-rounded" width='500' height='250'>
-      <ul class='tutorial-ul'>
-        <li>Row name: sample name</li>
-        <li>Column name: drug name</li>
-        <li>Features value: the observed value of the sample's reaction to the drug</li>
-      </ul>
-      <p>dbdrug2.csv: The data format is consistent with dbdrug1.csv and is classified as a training set sample</p>
-      <p>dbdrug3.csv: The data format is consistent with dbdrug1.csv, which is classified as a sample of the testing set</p>
-      <p>dbdrug.csv: The data format is consistent with dbdrug1.csv</p>
-
-      <p>edata1.csv: Transposed by edge_data.xls</p>
-      <img src="../img/edata.jpg" class="img-rounded" width='1000' height='500'>
-      <ul class='tutorial-ul'>
-        <li>Row name: sample name</li>
-        <li>Column name: Kinase_Substrate_Phosphorylation Site_Testing set/Training Set</li>
-        <li>Features value: edge features of the kinase-substrate network</li>
-      </ul>
-      <p>edata2.csv: The data format is consistent with edata1.csv and is classified as a training set sample</p>
-      <p>edata3.csv: The data format is consistent with edata1.csv, which is classified as a sample of the testing set</p>
-      <p>edata11.csv: The data format is consistent with edata1.csv</p>
-
-
-      <p style="font-weight:bold"> Onput Format</p>
-
-      <p>Afatinib of C486</p>
-      <img src="../img/afa.jpg" class="img-rounded" width='800' height='700'>
-      <p>Comparison of observed and predicted values of sample response to Afatinib, gefitinib and regorafenib</p>
-
+      <p style="font-weight: bold"> 6. Click "Run Task" to execute the task. Depending 
+        on the amount of data, the whole process takes about 20 minutes or more</p>
  
 
       <h3 id="log"> Log</h3>
       <img src="../img/log.jpg" class="img-rounded" width='1000' height='250'>
       <p>After clicking the above "Run Task" button, it will automatically jump to the "Log" tab, where you can see the task id and runtime information. Depending 
         on the amount of data, 
-        the task running time will vary. You can save the task id, and after the task is completed, you can view and download the result on the "Result" interface.</p>
-
-      
-      
-
+        the whole process takes about 20 minutes or more. You can save the task id, and after the task is completed, you can view and download the result on the "Result" interface.</p>
 
        <h3 id="result"> Result</h3>
        <img src="../img/result1.jpg" class="img-rounded" width='700' height='300'>
@@ -174,8 +98,6 @@
        <img src="../img/result3.jpg" class="img-rounded" width='800' height='400'>
        <p> 6. Download results</p>
 
-
- 
        
     </div>
   </div>

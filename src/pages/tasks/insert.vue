@@ -327,7 +327,7 @@ export default {
                     {
                         path: 'log',
                         query: {
-                           name: 'pcatest_0'
+                           name: 'afatinib_response_0'
                         }
                     }
         )
