@@ -42,7 +42,7 @@
       <h3 id="ioformat">Input and output format</h3>
 
       <p>1. Select model and the drug category you want to predict. Currently, only the prediction of Afatinib, Gefitinib, and Regorafenib are supported.</p>
-      <img src="../img/model.jpg" class="img-rounded" width='1000' height='500'>
+      <img src="../img/model.jpg" class="img-rounded" width='1000' height='600'>
       <p> Fill in the drug category you want to predict in drug_name, 1 represents Afatinib, 2 represents Gefitinib, 3 represents Regorafenib and the default is 1.</p>
 
       <p>2. Enter your task name.</p>
@@ -56,13 +56,13 @@
         <li>pho.csv</li>
       </ul>
       <p>pro.csv:The protein expression value data of the patient's tumor tissue (any tumor is acceptable) to be predicted</p>
-      <img src="../img/pro.jpg" class="img-rounded" width='1000' height='300'>
+      <img src="../img/pro.jpg" class="img-rounded" width='700' height='300'>
       <p>The first column is the protein gene name of the patient to be predicted (no duplicate values), the second column is the protein 
         expression value of the patient to be predicted (after normalization, no missing values), the column names 
         are [ID] and [patient ID ( You can use numbers or letters to number freely, and it must be consistent with the number in pho.csv)], the uploaded file must be in csv format.</p>
       
       <p>pho.csv:The expression data of phosphorylation site in tumor tissue (any tumor is acceptable) to be predicted</p>
-      <img src="../img/pho.jpg" class="img-rounded" width='1000' height='300'>
+      <img src="../img/pho.jpg" class="img-rounded" width='700' height='300'>
       <p>The first column is the phosphorylation site ID of the patient to be predicted (no repeated values), the format is [gene name]_[phosphorylation site category][phosphorylation site position], 
         the second column is the phosphorylation site of the patient to be predicted The expression value of the chemical site (after standardization, no missing values), 
         the column names are [ID] and [patient ID (free numbers or letters can be used, must be consistent with the number in pro.csv)], the uploaded file must be csv format.</p>
