@@ -92,7 +92,7 @@ export default {
   inject: ['reload'],
   data () {
          return {
-            id:'617fffa1c1016006991a92c0 ',
+            id:'617fffa1c1016006991a92c0',
             name: 'afatinib_reponse_0',
             driver: null,
             items: [],
