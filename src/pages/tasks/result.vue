@@ -92,8 +92,8 @@ export default {
   inject: ['reload'],
   data () {
          return {
-            id:'5fa3af3398cd290f8efbd7a5',
-            name: 'pcatest_1',
+            id:'617ea010d263b05213f0bc63',
+            name: 'afatinib_response_0',
             driver: null,
             items: [],
             activeName: 'first',
