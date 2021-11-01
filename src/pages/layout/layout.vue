@@ -88,11 +88,11 @@
             title: 'Add task',
             icon: 'el-icon-document-add'
           },
-          //{
-          //  path: '/tasks/delete',
-          //  title: 'Run task',
-          //  icon: 'el-icon-loading'
-          //},
+          {
+            path: '/tasks/delete',
+            title: 'Run task',
+            icon: 'el-icon-loading'
+          },
           {
             path: '/tasks/result',
             title: 'Result',
