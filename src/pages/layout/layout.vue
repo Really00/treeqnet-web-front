@@ -104,11 +104,11 @@
             icon: 'el-icon-s-data'
           },
 
-          //{
-          //   path: '/models/insert',
-          //   title: 'Add Model',
-          //   icon: 'el-icon-document-add'
-          //},
+          {
+             path: '/models/insert',
+             title: 'Add Model',
+             icon: 'el-icon-document-add'
+          },
 
 
           {

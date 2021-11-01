@@ -327,7 +327,7 @@ export default {
                     {
                         path: 'log',
                         query: {
-                           name: 'afatinib_response_0'
+                           name: this.name
                         }
                     }
         )
