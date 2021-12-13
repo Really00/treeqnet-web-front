@@ -345,9 +345,10 @@ export default {
                       path: "/home/lzl/tumor/individual-center-web/upload/example.zip"
                   }
               };
+            path = "/home/lzl/tumor/individual-center-web/upload/example.zip"
              console.log(params)
               this.instance.download(params).then((res)=>{ 
-                this.downloadfile(res.data,path.value.split("/").pop());
+                this.downloadfile(res.data,path.split("/").pop());
               });         
     },
      downloadfile (data,fileName) {
