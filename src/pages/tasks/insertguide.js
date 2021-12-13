@@ -20,7 +20,7 @@ export const steps = [
       element: "#demo3",
       popover: {
         title: "Select model",
-        description: "Select the model that handles your data. You can check out the model's description and capabilities in the tutorial",
+        description: "Select the model that handles your data. You can check out the model's description and capabilities in the tutorial, and as to model value drug_name, param value 1 represents Afatinib, 2 represents Gefitinib, 3 represents Regorafenib and the default is 1.",
         position: "bottom"
       }
     },
