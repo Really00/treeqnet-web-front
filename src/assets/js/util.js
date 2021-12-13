@@ -9,7 +9,7 @@ let util = {
 };
 
 export function setTitle (title) {
-  title = title || 'VUE-ADMIN';
+  title = title || 'TreeQNet';
   window.document.title = title;
 }
 
