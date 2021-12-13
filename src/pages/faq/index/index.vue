@@ -5,9 +5,7 @@
       <h3 id="">Q:  In addition to Afatinib, gefitinib and regorafenib drug reaction, whether it is possible to test other drug response ?</h3>
       
       
-      <p> The tutorial uses Afatinib, gefitinib and regorafenib as examples, because our example is to test the drug response of patients with metastatic colorectal 
-        cancer to Afatinib, gefitinib and regorafenib. 
-        Users can test the effects of different cancer patients on different drugs according to their own needs. reaction. This service has strong scalability.</p>
+      <p>Currently, we successfully predicted the sensitivity of patients with cancer to Afatinib, gefitinib and regorafenib as examples, and we will explore more drugs later. This service has strong scalability.</p>
       
       <h3 id="">Q:  Why does the service divide testing drug response into two steps instead of an end-to-end approach ?</h3>
       

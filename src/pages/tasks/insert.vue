@@ -44,6 +44,14 @@
           
           <el-form-item label=" " prop="modelname">
             <div class="bigfont">Select the model you want to use</div>
+            <el-popover
+            placement="top-start"
+            title="The meaning of drug_name"
+            width="400"
+            trigger="hover"
+            content="param value 1 represents Afatinib, 2 represents Gefitinib, 3 represents Regorafenib and the default is 1">
+            <i class="el-icon-question" slot="reference"></i>
+           </el-popover>
             
             <el-select v-model="form.modelname" @change="selectFn($event)" placeholder="select your model">
               <el-option
