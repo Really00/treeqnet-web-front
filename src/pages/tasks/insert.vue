@@ -17,6 +17,8 @@
         </el-popover>
 
          <el-button size="small"  @click.prevent.stop="start()">Run Tour</el-button>
+
+         <el-button  size="small" @click="download2()" >Download Example Data</el-button>
         
 
         <el-divider></el-divider>
@@ -323,6 +325,7 @@ export default {
     
 
     gotolog(){
+
       this.$router.push(
                     {
                         path: 'log',
@@ -332,7 +335,33 @@ export default {
                     }
         )
 
-    }
+    },
+
+    download2 () {
+                
+          //console.log(path)
+          let params = {
+                  params: {
+                      path: "/home/lzl/tumor/individual-center-web/upload/example.zip"
+                  }
+              };
+             console.log(params)
+              this.instance.download(params).then((res)=>{ 
+                this.downloadfile(res.data,path.value.split("/").pop());
+              });         
+    },
+     downloadfile (data,fileName) {
+        if (!data) {
+            return
+        }
+        let url = window.URL.createObjectURL(new Blob([data]));
+        let link = document.createElement('a');
+        link.style.display = 'none';
+        link.href = url;
+        link.setAttribute('download',fileName);
+        document.body.appendChild(link);
+        link.click();
+      }
 
 
 

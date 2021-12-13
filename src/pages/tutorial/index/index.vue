@@ -31,7 +31,7 @@
       </ul>
       
       <h3 id="howtouse"> How to use</h3>
-      <p> To use TreeQNet webserver visit <a href="" >202.38.31.87:8280 </a></p>
+      <p> To use TreeQNet webserver visit <a href="" >bioinfo.ustc.edu.cn </a></p>
       
       <h3 id="quicktostart"> Quick to start</h3>
       <img src="../img/quick.jpg" class="img-rounded" width='1000' height='600'>
