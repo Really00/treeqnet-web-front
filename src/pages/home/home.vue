@@ -24,7 +24,7 @@
       <hr class="half-rule">
 
       <p class="lead">TreeQnet is full open sourced</p>
-      <a href="https://www.sciencedirect.com/science/article/pii/S153561082030413X" class="btn btn-outline btn-lg">Access Our Paper</a>
+      <!--<a href="https://www.sciencedirect.com/science/article/pii/S153561082030413X" class="btn btn-outline btn-lg">Access Our Paper</a>-->
     </div>
   </div>
   </div>
